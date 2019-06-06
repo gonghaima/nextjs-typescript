@@ -1,12 +1,14 @@
 declare type RedditPost = {
   data: {
-    id: string
-    title: string
-  }
-}
+    id: string;
+    title: string;
+  };
+};
 
 declare type RedditResult = {
   data: {
-    children: ReadonlyArray<RedditPost>
-  }
-}
+    children: ReadonlyArray<RedditPost>;
+  };
+};
+
+declare type PromiseResult<T> = T extends Promise<infer U> ? U : T;
